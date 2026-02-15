@@ -205,8 +205,7 @@ YOUTUBE API CONFIGURATION
 ==================================================
 */
 
-const YOUTUBE_API_KEY =
-	"AIzaSyB3X89T8QHr4AeDX-_zv5DuRGDY6karJmE";
+const YOUTUBE_API_KEY = null
 
 
 
