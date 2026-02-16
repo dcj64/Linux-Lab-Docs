@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docker Installation | Proxmox Documentation</title>
+    <title>Docker Installation | Home Lab Documentation</title>
     <script>
       (function() {
         const savedTheme = localStorage.getItem("theme");
@@ -20,7 +20,7 @@
   <body>
     <header class="topbar">
       <div class="logo">
-        <a href="index.html">Proxmox Documentation</a>
+        <a href="index.html">Linux Home Lab Documentation</a>
       </div>
       <button id="theme-toggle" class="theme-toggle"> 🌙 </button>
     </header>
@@ -61,35 +61,22 @@
           </header>
           <section>
             <h2>Update System</h2>
-            <pre>
-													<code>sudo apt update
-sudo apt upgrade </code>
-												</pre>
+            <pre><code>sudo apt update <br>sudo apt upgrade </code></pre>
           </section>
           <section>
             <h2>Install Required Packages</h2>
-            <pre>
-													<code>curl -fsSL https://get.docker.com -o get-docker.sh</code>
-												</pre>
+            <pre><code>curl -fsSL https://get.docker.com -o get-docker.sh</code></pre>
           </section>
           <h2>Install Docker</h2>
-          <pre>
-												<code>sudo sh get-docker.sh
-
-</code>
-											</pre>
+          <pre><code>sudo sh get-docker.sh</code></pre>
           </section>
           <section>
             <h2>Verify Installation</h2>
-            <pre>
-												<code>sudo docker run hello-world</code>
-											</pre>
+            <pre><code>sudo docker run hello-world</code></pre>
           </section>
           <section>
             <h2>Enable Docker at Boot</h2>
-            <pre>
-												<code>sudo systemctl enable docker</code>
-											</pre>
+            <pre><code>sudo systemctl enable docker</code></pre>
           </section>
           <footer class="doc-footer">
             <div class="doc-meta" data-author="dcj64" data-created="2025-06-01"></div>
