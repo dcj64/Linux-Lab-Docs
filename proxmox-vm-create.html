@@ -60,32 +60,116 @@
                     <header class="doc-header">
                         <h1>Create Virtual Machine</h1>
                         <p class="doc-description">
-                            Create a new Ubuntu Server virtual machine in Proxmox.
+                            Create a new Ubuntu Server virtual machine in Proxmox. <br>Decide on which drive to use then click Create VM.
                         </p>
+                        <img
+                            src="images/vm_creation/vm-create-step1.png"
+                            alt="Proxmox Create VM Step 1"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Create a new Ubuntu Server virtual machine in Proxmox. 
+                        </figcaption>
+                        </figure>
                     </header>
                     <section>
                         <h2>Upload ISO</h2>
                         <p>Upload Ubuntu ISO to Proxmox storage.</p>
+                        <img
+                            src="images/vm_creation/vm-create-step2.png"
+                            alt="Proxmox Create VM Step 2"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Upload the Ubuntu Server ISO file to Proxmox storage.
+                        </figcaption>
+                        </figure>
                     </section>
                     <section>
-                        <h2>Create VM</h2>
-                        <p>Click "Create VM".</p>
+                        <h2>Create System for VM</h2>
+                        <p>Leave at defaults, Enable Qemu Agent.</p>
+                        <img
+                            src="images/vm_creation/vm-create-step3.png"
+                            alt="Proxmox Create VM Step 3"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Create System for Ubuntu Server.
+                        </figcaption>
+                    </section>
+                
+                    <section>
+                        <h2>Configure Harddrive attributes.</h2>
+                        <p>Enable Discard this can help reclaim storage on SSDs and improves performance.</p>
+                        
+                        <img
+                            src="images/vm_creation/vm-create-step4.png"
+                            alt="Proxmox Create VM Step 4"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Ubuntu Server requires approx 25GB minimum.
+                        </figcaption> 
                     </section>
                     <section>
-                        <h2>Select ISO</h2>
-                        <p>Choose uploaded Ubuntu ISO.</p>
-                    </section>
-                    <section>
-                        <h2>Configure Hardware</h2>
+                        <h2>Configure CPU core's to be used</h2>
+                        <p>Set cores as per your PC capabilities and set type as Host.</p>
+                        <p>You can enable 'Allow Guest OS to use 1GB size pages, if host HW allows it'</p>
                         <ul>
                             <li>CPU: 2 cores</li>
-                            <li>RAM: 2048 MB</li>
-                            <li>Disk: 20 GB</li>
                         </ul>
+                        <img
+                            src="images/vm_creation/vm-create-step5.png"
+                            alt="Proxmox Create VM Step 5"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Configure as per your PC capabilities. Set CPU type to Host.
+                        </figcaption>
+                    </section>
+                    <section>
+                        <h2>Configure memory to be used</h2>
+                        <p>Set Memory as per your PC capabilities.</p>
+                        <p>Allow or Disallow Ballooning</p>
+                        <ul>
+                            <li>Mem: 2048 MB</li>
+                        </ul>
+                        <img
+                            src="images/vm_creation/vm-create-step6.png"
+                            alt="Proxmox Create VM Step 6"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Set Max and Min amount of memory to be used, requires Ballooning to be enabled
+                        </figcaption>
+                    </section>
+                    <section>
+                        <h2>Configure Networking</h2>
+                        <p>Leave at default unless you have reason to change.</p>
+                        <img
+                            src="images/vm_creation/vm-create-step7.png"
+                            alt="Proxmox Create VM Step 7"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Leave as default unless you know what you require.
+                        </figcaption>
+                    </section>
+                    <section>
+                        <h2>Confirm Selections</h2>
+                        <p>Go back if you wish to change anything.</p>
+                        <img
+                            src="images/vm_creation/vm-create-step8.png"
+                            alt="Proxmox Create VM Step 8"
+                            class="doc-image"
+                        />
+                        <figcaption>
+                        Check and confirm your selections.
+                        </figcaption>
                     </section>
                     <section>
                         <h2>Start VM</h2>
-                        <p>Start the virtual machine and begin installation.</p>
+                        <p>Click Finish and then start the virtual machine and begin the installation of Ubuntu Server.</p>
                     </section>
                     <footer class="doc-footer">
                         <div class="doc-meta" data-author="dcj64" data-created="2025-06-01"></div>
