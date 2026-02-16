@@ -88,7 +88,7 @@
 
 <h2>Install the Guest Agent</h2>
 
-<pre data-title="ubuntu@server: ~">
+<pre>
 <code>sudo apt update
 sudo apt install qemu-guest-agent -y</code>
 </pre>
@@ -100,7 +100,7 @@ sudo apt install qemu-guest-agent -y</code>
 
 <h2>Start the Service</h2>
 
-<pre data-title="ubuntu@server: ~">
+<pre>
 <code>sudo systemctl start qemu-guest-agent</code>
 </pre>
 
@@ -111,7 +111,7 @@ sudo apt install qemu-guest-agent -y</code>
 
 <h2>Enable Service at Boot</h2>
 
-<pre data-title="ubuntu@server: ~">
+<pre>
 <code>sudo systemctl enable qemu-guest-agent</code>
 </pre>
 
@@ -122,7 +122,7 @@ sudo apt install qemu-guest-agent -y</code>
 
 <h2>Verify Installation</h2>
 
-<pre data-title="ubuntu@server: ~">
+<pre>
 <code>sudo systemctl status qemu-guest-agent</code>
 </pre>
 
@@ -133,7 +133,7 @@ sudo apt install qemu-guest-agent -y</code>
 
 <h2>Reboot</h2>
 <p> After rebooting, the VM’s IP address should appear in the <strong>Summary</strong> tab within the Proxmox interface. </p>
-<pre data-title="ubuntu@server: ~">
+<pre>
 <code>sudo reboot</code>
 </pre>
 

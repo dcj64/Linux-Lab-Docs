@@ -66,32 +66,27 @@
           <section>
             <h2>Step 1: Identify Network Interface</h2>
             <p> Run the following command to list available network interfaces: </p>
-            <pre>
-											<code>ip a</code>
-										</pre>
+            <pre><code>ip a</code>
+						</pre>
             <p> Look for your active interface name (example: <code>enp6s18</code>). </p>
           </section>
           <section>
             <h2>Step 2: Locate Netplan Configuration File</h2>
             <p> Netplan configuration files are stored in: </p>
-            <pre>
-											<code>/etc/netplan/</code>
-										</pre>
+            <pre><code>/etc/netplan/</code>
+						</pre>
             <p> List the files: </p>
-            <pre>
-											<code>ls -la /etc/netplan/</code>
-										</pre>
+            <pre><code>ls -la /etc/netplan/</code>
+						</pre>
             <p> View the contents of the configuration file: </p>
-            <pre>
-											<code>sudo cat /etc/netplan/50-cloud-init.yaml</code>
-										</pre>
+            <pre><code>sudo cat /etc/netplan/50-cloud-init.yaml</code>
+						</pre>
           </section>
           <section>
             <h2>Step 3: Edit Netplan Configuration</h2>
             <p> Open the configuration file: </p>
-            <pre>
-											<code>sudo nano /etc/netplan/50-cloud-init.yaml</code>
-										</pre>
+            <pre><code>sudo nano /etc/netplan/50-cloud-init.yaml</code>
+						</pre>
             <p> Example configuration: </p>
             <pre>
 											<code>network:
@@ -127,28 +122,24 @@
           </section>
           <section>
             <h2>Step 4: Secure Configuration File</h2>
-            <pre>
-											<code>sudo chmod 600 /etc/netplan/*.yaml</code>
-										</pre>
+            <pre><code>sudo chmod 600 /etc/netplan/*.yaml</code>
+						</pre>
           </section>
           <section>
             <h2>Step 5: Apply Configuration</h2>
-            <pre>
-											<code>sudo netplan apply</code>
-										</pre>
+            <pre><code>sudo netplan apply</code>
+						</pre>
           </section>
           <section>
             <h2>Step 6: Verify IP Address</h2>
             <p> Confirm the new static IP address: </p>
-            <pre>
-											<code>ip a show enp6s18</code>
-										</pre>
+            <pre><code>ip a show enp6s18</code>
+						</pre>
           </section>
           <section>
             <h2>Step 7: Test Network Connectivity</h2>
-            <pre>
-											<code>ping -c 3 192.168.50.1</code>
-										</pre>
+            <pre><code>ping -c 3 192.168.50.1</code>
+						</pre>
             <p> If successful, your static IP configuration is complete. </p>
           </section>
           <footer class="doc-footer">
