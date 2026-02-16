@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	initializeTerminalTitles();
 
 	initializeYouTubeCards();
+
+	initializeCodeBlockCleanup();
 });
 
 
@@ -407,3 +409,44 @@ function formatDate(dateString) {
 		}
 	);
 }
+
+/*
+========================================
+Fix indentation inside code blocks
+========================================
+*/
+
+function initializeCodeBlockCleanup()
+{
+    const blocks = document.querySelectorAll("pre code");
+
+    blocks.forEach(code =>
+    {
+        let lines = code.innerHTML.split("\n");
+
+        // Remove empty first and last lines
+        if (lines[0].trim() === "") lines.shift();
+        if (lines[lines.length - 1].trim() === "") lines.pop();
+
+        // Find smallest indentation
+        let minIndent = Infinity;
+
+        lines.forEach(line =>
+        {
+            if (line.trim() === "") return;
+
+            const indent = line.match(/^(\s*)/)[0].length;
+
+            if (indent < minIndent)
+                minIndent = indent;
+        });
+
+        // Remove indentation
+        lines = lines.map(line =>
+            line.substring(minIndent)
+        );
+
+        code.innerHTML = lines.join("\n");
+    });
+}
+
