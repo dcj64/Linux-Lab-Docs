@@ -21,7 +21,6 @@ Built With:
 HTML5,CSS3,JavaScript (just a little)
 All running on Linux.
 
-
 This project exists to:
 
 Practice web development with the use of AI.
@@ -30,10 +29,9 @@ Document Linux knowledge, so I can find it when I forget it!
 
 Share useful technical information.
 
-
 License:
 This project is licensed under the MIT License.
 
 Author: dcj64
 
-GitHub: https://github.com/dcj64/proxmox-docs/
+GitHub: https://dcj64.github.io/Linux-Lab-Docs/
