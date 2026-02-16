@@ -85,39 +85,60 @@
             <p> Before installing the agent, ensure the <code>Guest Agent</code> option is enabled in the VM’s <strong>Options</strong> tab within the Proxmox web interface. </p>
           </section>
           <section>
-            <h2>Install the Guest Agent</h2>
-            <p> Connect to your Ubuntu virtual machine and run: </p>
-            <pre>
-											<code>sudo apt update sudo apt install qemu-guest-agent -y</code>
-										</pre>
-          </section>
-          <section>
-            <h2>Start the Service</h2>
-            <pre>
-											<code>sudo systemctl start qemu-guest-agent</code>
-										</pre>
-          </section>
-          <section>
-            <h2>Enable Service at Boot</h2>
-            <pre>
-											<code>sudo systemctl enable qemu-guest-agent</code>
-										</pre>
-            <p> This ensures the service runs automatically when the VM starts. </p>
-          </section>
-          <section>
-            <h2>Verify Installation</h2>
-            <p> Check the service status: </p>
-            <pre>
-											<code>sudo systemctl status qemu-guest-agent</code>
-										</pre>
-          </section>
-          <section>
-            <h2>Reboot the Virtual Machine</h2>
-            <pre>
-											<code>sudo reboot</code>
-										</pre>
-            <p> After rebooting, the VM’s IP address should appear in the <strong>Summary</strong> tab within the Proxmox interface. </p>
-          </section>
+
+<h2>Install the Guest Agent</h2>
+
+<pre data-title="ubuntu@server: ~">
+<code>sudo apt update
+sudo apt install qemu-guest-agent -y</code>
+</pre>
+
+</section>
+
+
+<section>
+
+<h2>Start the Service</h2>
+
+<pre data-title="ubuntu@server: ~">
+<code>sudo systemctl start qemu-guest-agent</code>
+</pre>
+
+</section>
+
+
+<section>
+
+<h2>Enable Service at Boot</h2>
+
+<pre data-title="ubuntu@server: ~">
+<code>sudo systemctl enable qemu-guest-agent</code>
+</pre>
+
+</section>
+
+
+<section>
+
+<h2>Verify Installation</h2>
+
+<pre data-title="ubuntu@server: ~">
+<code>sudo systemctl status qemu-guest-agent</code>
+</pre>
+
+</section>
+
+
+<section>
+
+<h2>Reboot</h2>
+
+<pre data-title="ubuntu@server: ~">
+<code>sudo reboot</code>
+</pre>
+
+</section>
+
           <footer class="doc-footer">
             <div class="doc-meta" data-author="dcj64" data-created="2025-06-01"></div>
           </footer>
