@@ -85,15 +85,31 @@ SIDEBAR COLLAPSIBLE
 ==================================================
 */
 
-function initializeSidebar() {
-    const titles = document.querySelectorAll(".collapsible");
+document.querySelectorAll(".collapsible").forEach((button) => {
+    button.addEventListener("click", function () {
+        const section = this.closest(".nav-section");
 
-    titles.forEach((title) => {
-        title.addEventListener("click", function () {
-            this.parentElement.classList.toggle("open");
+        // Close all other sections
+        document.querySelectorAll(".nav-section").forEach((sec) => {
+            if (sec !== section) {
+                sec.classList.remove("open");
+            }
         });
+
+        // Toggle current
+        section.classList.toggle("open");
     });
-}
+});
+
+// function initializeSidebar() {
+//     const titles = document.querySelectorAll(".collapsible");
+
+//     titles.forEach((title) => {
+//         title.addEventListener("click", function () {
+//             this.parentElement.classList.toggle("open");
+//         });
+//     });
+// }
 
 /*
 ==================================================
