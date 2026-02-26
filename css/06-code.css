@@ -15,7 +15,7 @@ code:not(pre code) {
 pre {
     position: relative;
     background: var(--code-bg);
-    color: #e5e7eb;
+    color: #e5e5eb;
     padding: 38px 16px 16px 16px;
     border-radius: 8px;
     overflow-x: auto;

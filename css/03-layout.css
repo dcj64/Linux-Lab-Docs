@@ -19,6 +19,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 14px 24px;
 }
 
 .logo a {
