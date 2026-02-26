@@ -406,10 +406,13 @@ function initializeImageZoom() {
 
     if (!lightbox) return;
 
-    images.forEach((img) => {
+    document.querySelectorAll(".zoomable").forEach((img) => {
         img.addEventListener("click", function () {
             lightboxImg.src = this.src;
+            caption.textContent = this.alt || "";
+
             lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
         });
     });
 
