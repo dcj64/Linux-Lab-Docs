@@ -28,8 +28,6 @@ INITIALIZATION
 document.addEventListener("DOMContentLoaded", function () {
     initializeThemeToggle();
 
-    initializeSidebar();
-
     initializeActiveLinks();
 
     initializeCopyButtons();
@@ -86,6 +84,7 @@ SIDEBAR COLLAPSIBLE
 */
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Highlight active link and auto-open section
     const currentPage = window.location.pathname.split("/").pop();
 
     document.querySelectorAll(".nav-link").forEach((link) => {
@@ -99,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Collapsible sidebar
     document.querySelectorAll(".collapsible").forEach((button) => {
         button.addEventListener("click", function () {
             const section = this.closest(".nav-section");
@@ -112,6 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
             section.classList.toggle("open");
         });
     });
+    // Initialize image zoom
+    initializeImageZoom();
 });
 
 // function initializeSidebar() {
