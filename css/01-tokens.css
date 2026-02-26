@@ -26,7 +26,8 @@
     --text-lg: 18px;
 
     /* Colors (Light Mode Default) */
-    --bg: #f8fafc;
+    /*--bg: #f8fafc;*/
+    --bg: #0b1322;
     --surface: #ffffff;
     --header-bg: #ffffff;
 
