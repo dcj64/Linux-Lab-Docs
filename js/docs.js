@@ -384,8 +384,11 @@ function initializeImageZoom() {
         });
     });
 
-    lightbox.addEventListener("click", function () {
-        lightbox.classList.remove("active");
+    lightbox.addEventListener("click", function (e) {
+        if (e.target == lightbox) {
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "";
+        }
     });
 
     document.addEventListener("keydown", function (e) {
