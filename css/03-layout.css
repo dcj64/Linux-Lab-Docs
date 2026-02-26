@@ -1,17 +1,22 @@
 /* =========================================
-   FIXED SIDEBAR LAYOUT (Correct Version)
+   GLOBAL CONTAINER SYSTEM
 ========================================= */
 
-.sidebar {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: var(--sidebar-width);
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+:root {
+    --container-width: 1400px;
 }
 
-/* Header spans full width but is offset */
+/* Centered wrapper */
+
+.page-wrapper {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+}
+
+/* =========================================
+   HEADER
+========================================= */
 
 .topbar {
     position: fixed;
@@ -24,10 +29,10 @@
     z-index: 100;
 }
 
-/* This constrains header content */
+/* Header content aligns with container */
 
 .topbar-container {
-    max-width: var(--content-width);
+    max-width: var(--container-width);
     margin: 0 auto;
     height: 60px;
     display: flex;
@@ -37,31 +42,52 @@
 }
 
 /* =========================================
-   LOGO
+   SIDEBAR
 ========================================= */
 
-.logo a {
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
-    color: #ffffff;
+.sidebar {
+    position: fixed;
+    top: 60px;
+
+    width: var(--sidebar-width);
+    height: calc(100vh - 60px);
+
+    overflow-y: auto;
 }
 
-.logo a:hover {
-    opacity: 0.85;
+/* Align sidebar inside centered container */
+
+.page-wrapper {
+    position: relative;
 }
 
-/* Main content */
+.page-wrapper .sidebar {
+    left: calc((100vw - var(--container-width)) / 2);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
 
 .content {
     margin-left: var(--sidebar-width);
     padding-top: 60px;
+    flex: 1;
 }
 
-/* Inner content container */
+/* Inner content width control */
 
 .content > .doc {
     max-width: var(--content-width);
-    margin: 0 auto;
     padding: var(--space-xl);
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+
+@media (max-width: 1200px) {
+    .page-wrapper {
+        max-width: 100%;
+    }
 }
