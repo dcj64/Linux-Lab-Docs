@@ -6,6 +6,7 @@
     position: sticky;
     top: 60px; /* height of header */
     height: fit-content;
+    box-shadow: 1px 0 0 var(--border);
 
     width: 260px;
     background: var(--sidebar-bg);
