@@ -3,13 +3,19 @@
 ======================================== */
 
 .topbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* .topbar {
     background: var(--header-bg);
     border-bottom: 1px solid var(--border);
     padding: 14px 24px;
     position: sticky;
     top: 0;
     z-index: 100;
-}
+} */
 
 /* =========================================
    TOPBAR CONTAINER ALIGNMENT
@@ -37,6 +43,18 @@
 
 .layout {
     display: flex;
+}
+
+/* Content area */
+
+.content {
+    margin-left: var(--sidebar-width);
+    padding: var(--space-xl);
+    max-width: var(--content-width);
+}
+
+/* .layout {
+    display: flex;
     min-height: calc(100vh - 60px);
     max-width: 1400px;
     margin: 0 auto;
@@ -47,4 +65,4 @@
     padding: 40px;
     max-width: 900px;
     margin: 0 auto;
-}
+} */

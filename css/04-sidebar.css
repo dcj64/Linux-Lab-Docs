@@ -3,15 +3,19 @@
 ======================================== */
 
 .sidebar {
-    position: sticky;
+    position: fixed;
     top: 60px; /* height of header */
-    height: fit-content;
-    box-shadow: 1px 0 0 var(--border);
+    left: 0;
 
-    width: 260px;
-    background: var(--sidebar-bg);
+    width: var(--sidebar-width);
+    height: calc(100vh - 60px);
+
+    background: var(--surface);
     border-right: 1px solid var(--border);
-    padding: 20px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+
+    padding: var(--space-lg);
+    overflow-y: auto;
 }
 
 .nav-title {
