@@ -3,7 +3,6 @@
 ======================================== */
 
 :root {
-
     --bg: #f8fafc;
     --sidebar-bg: #ffffff;
     --header-bg: #ffffff;
@@ -28,7 +27,12 @@
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        sans-serif;
     background: var(--bg);
     color: var(--text);
 }
@@ -37,7 +41,9 @@ body {
    TYPOGRAPHY
 ======================================== */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--heading);
 }
 

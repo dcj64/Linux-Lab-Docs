@@ -14,22 +14,23 @@
     --border: #334155;
 }
 
-/* Sidebar hover */
+/* Sidebar background in dark mode */
+
+[data-theme="dark"] .sidebar {
+    background: var(--surface);
+}
+
+/* Sidebar links */
+
+[data-theme="dark"] .nav-link {
+    color: #e2e8f0;
+}
 
 [data-theme="dark"] .nav-link:hover {
     background: #334155;
 }
 
-/* Sidebar active link */
-
 [data-theme="dark"] .nav-link.active {
     background: #1e40af;
     color: #ffffff;
-    border-left: 3px solid #3b82f6;
-}
-
-/* Section titles */
-
-[data-theme="dark"] .nav-title {
-    color: #94a3b8;
 }
