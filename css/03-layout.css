@@ -1,23 +1,34 @@
-/* ========================================
-   TOPBAR
-======================================== */
+/* =========================================
+   FIXED SIDEBAR LAYOUT (Correct Version)
+========================================= */
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: var(--sidebar-width);
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+/* Header spans full width but is offset */
 
 .topbar {
-    height: 60px;
-    background: var(--header-bg);
-    border-bottom: 1px solid var(--border);
     position: fixed;
     top: 0;
     left: var(--sidebar-width);
     right: 0;
+    height: 60px;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
     z-index: 100;
 }
 
-/* =========================================
-   TOPBAR CONTAINER ALIGNMENT
-========================================= */
+/* This constrains header content */
 
 .topbar-container {
+    max-width: var(--content-width);
+    margin: 0 auto;
     height: 60px;
     display: flex;
     align-items: center;
@@ -25,25 +36,17 @@
     padding: 0 var(--space-lg);
 }
 
-.logo a {
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--heading);
-    font-size: 18px;
-}
-
-/* ========================================
-   MAIN LAYOUT
-======================================== */
-
-.layout {
-    display: block;
-}
-
-/* Content area */
+/* Main content */
 
 .content {
     margin-left: var(--sidebar-width);
-    padding: calc(var(--space-xl) + 60px) var(--space-xl) var(--space-xl);
+    padding-top: 60px;
+}
+
+/* Inner content container */
+
+.content > .doc {
     max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-xl);
 }
