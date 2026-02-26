@@ -16,7 +16,7 @@
 .topbar {
     position: fixed;
     top: 0;
-    left: var(--sidebar-width);
+    left: 0;
     right: 0;
     height: 60px;
     background: var(--header-bg);
@@ -34,6 +34,21 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 var(--space-lg);
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo a {
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo a:hover {
+    opacity: 0.85;
 }
 
 /* Main content */

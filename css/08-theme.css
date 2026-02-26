@@ -41,3 +41,7 @@
     background: #1e40af;
     color: #ffffff;
 }
+
+[data-theme="dark"] .logo a {
+    color: #ffffff;
+}
