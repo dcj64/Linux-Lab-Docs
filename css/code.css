@@ -1,0 +1,67 @@
+/* ========================================
+   INLINE CODE
+======================================== */
+
+code:not(pre code) {
+    background: #e0e7ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* ========================================
+   TERMINAL BLOCK
+======================================== */
+
+pre {
+    position: relative;
+    background: var(--code-bg);
+    color: #e5e7eb;
+    padding: 38px 16px 16px 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: Consolas, Monaco, monospace;
+    margin: 16px 0;
+}
+
+pre::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 60px;
+    font-size: 13px;
+    color: #cbd5e1;
+    background: #1e293b;
+    border-radius: 8px 8px 0 0;
+}
+
+pre::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    background: #ef4444;
+    border-radius: 50%;
+    box-shadow:
+        16px 0 0 #f59e0b,
+        32px 0 0 #22c55e;
+}
+
+/* Copy button */
+
+.copy-button {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    background: #334155;
+    color: #e5e7eb;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}

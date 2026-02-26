@@ -1,0 +1,45 @@
+/* ========================================
+   LINKS GRID
+======================================== */
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.link-column ul {
+    padding-left: 18px;
+}
+
+/* ========================================
+   VIDEO GRID
+======================================== */
+
+.video-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.video-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.video-thumbnail {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.doc-footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: #64748b;
+}
