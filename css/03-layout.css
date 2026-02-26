@@ -17,11 +17,13 @@
 
 .topbar-container {
     margin-left: var(--sidebar-width);
-    padding: 0 var(--space-lg);
     height: 60px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 0 var(--space-lg);
 }
 
 .logo a {
@@ -46,17 +48,3 @@
     padding: var(--space-xl);
     max-width: var(--content-width);
 }
-
-/* .layout {
-    display: flex;
-    min-height: calc(100vh - 60px);
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.content {
-    flex: 1;
-    padding: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-} */
