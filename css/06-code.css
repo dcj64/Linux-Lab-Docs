@@ -83,3 +83,10 @@ pre::after {
     border-radius: 4px;
     cursor: pointer;
 }
+
+pre:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.1),
+        0 4px 6px rgba(0, 0, 0, 0.08);
+}
