@@ -85,19 +85,32 @@ SIDEBAR COLLAPSIBLE
 ==================================================
 */
 
-document.querySelectorAll(".collapsible").forEach((button) => {
-    button.addEventListener("click", function () {
-        const section = this.closest(".nav-section");
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
 
-        // Close all other sections
-        document.querySelectorAll(".nav-section").forEach((sec) => {
-            if (sec !== section) {
-                sec.classList.remove("open");
+    document.querySelectorAll(".nav-link").forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+
+            const section = link.closest(".nav-section");
+            if (section) {
+                section.classList.add("open");
             }
-        });
+        }
+    });
 
-        // Toggle current
-        section.classList.toggle("open");
+    document.querySelectorAll(".collapsible").forEach((button) => {
+        button.addEventListener("click", function () {
+            const section = this.closest(".nav-section");
+
+            document.querySelectorAll(".nav-section").forEach((sec) => {
+                if (sec !== section) {
+                    sec.classList.remove("open");
+                }
+            });
+
+            section.classList.toggle("open");
+        });
     });
 });
 

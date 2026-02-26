@@ -29,34 +29,48 @@
 
     <body>
         <header class="topbar">
-            <div class="logo">
-                <a href="index.html">Linux Lab Documentation</a>
-            </div>
+            <div class="topbar-container">
+                <div class="logo">
+                    <a href="index.html">Linux Lab Documentation</a>
+                </div>
 
-            <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+            </div>
         </header>
 
         <div class="layout">
             <aside class="sidebar">
                 <nav>
                     <div class="nav-section">
-                        <div class="nav-title">Proxmox</div>
+                        <button type="button" class="nav-title collapsible">Proxmox</button>
 
-                        <a href="proxmox-vm-create.html" class="nav-link">Create VM</a>
+                        <div class="nav-items">
+                            <a href="proxmox-vm-create.html" class="nav-link">
+                                Create Virtual Machine
+                            </a>
+                            <a href="ubuntu-server-install.html" class="nav-link">
+                                Install Ubuntu Server
+                            </a>
+                            <a href="qemu-agent.html" class="nav-link">QEMU Guest Agent</a>
+                            <a href="static-ip.html" class="nav-link">Static IP Configuration</a>
+                        </div>
+                    </div>
 
-                        <a href="ubuntu-server-install.html" class="nav-link">
-                            Install Ubuntu Server
-                        </a>
+                    <div class="nav-section">
+                        <button type="button" class="nav-title collapsible">Docker</button>
 
-                        <a href="qemu-agent.html" class="nav-link">QEMU Guest Agent</a>
+                        <div class="nav-items">
+                            <a href="docker-install.html" class="nav-link">Install Docker</a>
+                            <a href="portainer-install.html" class="nav-link">Install Portainer</a>
+                        </div>
+                    </div>
 
-                        <a href="static-ip.html" class="nav-link">Static IP Configuration</a>
+                    <div class="nav-section">
+                        <button type="button" class="nav-title collapsible">Resources</button>
 
-                        <a href="docker-install.html" class="nav-link">Install Docker</a>
-
-                        <a href="portainer-install.html" class="nav-link">Install Portainer</a>
-
-                        <a href="useful-links.html" class="nav-link">Useful Links</a>
+                        <div class="nav-items">
+                            <a href="useful-links.html" class="nav-link">Useful Links</a>
+                        </div>
                     </div>
                 </nav>
             </aside>
