@@ -3,6 +3,10 @@
 ======================================== */
 
 .sidebar {
+    position: sticky;
+    top: 60px; /* height of header */
+    height: fit-content;
+
     width: 260px;
     background: var(--sidebar-bg);
     border-right: 1px solid var(--border);
