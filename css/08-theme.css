@@ -3,13 +3,33 @@
 ======================================== */
 
 [data-theme="dark"] {
-
     --bg: #0f172a;
-    --sidebar-bg: #1e293b;
+    --surface: #1e293b;
     --header-bg: #1e293b;
 
     --text: #e2e8f0;
     --heading: #ffffff;
+    --muted: #94a3b8;
 
     --border: #334155;
+}
+
+/* Sidebar hover */
+
+[data-theme="dark"] .nav-link:hover {
+    background: #334155;
+}
+
+/* Sidebar active link */
+
+[data-theme="dark"] .nav-link.active {
+    background: #1e40af;
+    color: #ffffff;
+    border-left: 3px solid #3b82f6;
+}
+
+/* Section titles */
+
+[data-theme="dark"] .nav-title {
+    color: #94a3b8;
 }
