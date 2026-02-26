@@ -50,3 +50,18 @@ h3 {
 section {
     margin-top: 40px;
 }
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
