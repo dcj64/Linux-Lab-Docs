@@ -6,8 +6,10 @@
     height: 60px;
     background: var(--header-bg);
     border-bottom: 1px solid var(--border);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: var(--sidebar-width);
+    right: 0;
     z-index: 100;
 }
 
@@ -16,13 +18,10 @@
 ========================================= */
 
 .topbar-container {
-    margin-left: var(--sidebar-width);
     height: 60px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 var(--space-lg);
 }
 
@@ -45,6 +44,6 @@
 
 .content {
     margin-left: var(--sidebar-width);
-    padding: var(--space-xl);
+    padding: calc(var(--space-xl) + 60px) var(--space-xl) var(--space-xl);
     max-width: var(--content-width);
 }
